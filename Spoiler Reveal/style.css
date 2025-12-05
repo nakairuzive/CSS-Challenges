@@ -1,0 +1,28 @@
+
+:root{
+    --spoiler-black: #000;
+}
+
+body{
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.redacted{
+    background-color: var(--spoiler-black);
+    color: var(--spoiler-black);
+    padding: 0 5px;
+}
+
+.redacted:hover{
+    background-color: rgba(207, 207, 207,.5);
+    cursor: pointer;
+    transition: 750ms ease-in;
+}
+
+.forum-post{
+    background-color: rgba(207, 207, 207,.5);
+    width: 500px;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
