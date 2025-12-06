@@ -1,0 +1,43 @@
+body{
+    display: flex;
+    height: 95vh;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    
+}
+
+:root{
+    --border: #bbb;
+    --border-blue: #3a71ca; 
+}
+
+.container{
+    width: 80%;
+    min-width: 300px;  
+    padding: 1em;
+}
+
+label{
+    display: none;
+}
+
+#search-bar{
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    width: 10%;
+    font-weight: normal;
+    transition: 450ms;
+}
+
+
+#search-bar:hover{
+    border: 1px solid var(--border-blue); 
+    width: 300px;
+    box-shadow: 1px 0 2px rgba(58, 113, 202,.5);
+    transition: 450ms;
+}
+
+#search-bar:hover::placeholder{
+    color: white;
+}
