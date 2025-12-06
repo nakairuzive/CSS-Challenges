@@ -1,0 +1,50 @@
+body{
+    font-size: 16px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+:root{
+    --colour-1: #DEB8F5;
+    --colour-2: #C8A9F7;
+    --colour-3: #B299F8;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,20px);
+    column-gap: 20px;
+}
+
+.sqr-1{
+    background-color: var(--colour-1);
+}
+
+.sqr-2{
+    background-color: var(--colour-2);
+}
+
+.sqr-3{
+    background-color: var(--colour-3);
+}
+
+@keyframes rotatingAnimation{
+    from{
+        rotate: -45deg;
+    }
+    to{
+        rotate: 45deg;
+    }
+}
+
+.square{
+    width: 20px;
+    height: 20px;
+    animation: rotatingAnimation infinite 2s;
+}
+
+
+
