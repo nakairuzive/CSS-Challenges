@@ -1,0 +1,29 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+:root{
+    --white: #fff;
+    --red: #bc022c;
+    --flag-height: 200px;
+}
+
+.flag-container{
+    height: var(--flag-height);
+    width: calc(var(--flag-height) * 3/2);
+    box-shadow: 2px 1px 5px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.red-circle{
+    width: calc(var(--flag-height) * 3/5);
+    height: calc(var(--flag-height) *3/5);
+    border-radius: 100%;
+    background-color: var(--red);
+}
