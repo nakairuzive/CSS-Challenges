@@ -1,0 +1,35 @@
+body{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+:root{
+    --red: #ed2938;
+    --white: #fff;
+    --blue: #002495;
+    --flag-height: 150px;
+
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr );
+    height: var(--flag-height) ;
+    width: calc(var(--flag-height) * 3/2);
+    box-shadow: 1px 1px 5px black;
+}
+
+.flag-stripe-1{
+    background-color: var(--blue);
+}
+
+.flag-stripe-2{
+    background-color: var(--white);
+}
+
+.flag-stripe-3{
+    background-color: var(--red);
+}
