@@ -1,0 +1,46 @@
+body{
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 200;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+}
+
+:root{
+    --colour-1: #BA42C0;
+    --colour-2: #C669D2;
+    --colour-3: #D291E3;
+    --colour-4: #DEB8F5;
+}
+
+
+
+@keyframes carouselAnimation{
+    0% {
+        content: "Oreos";
+    }
+    25% {
+        content: "Narnia";
+    }
+    50%{
+        content: "Lilo";
+    }
+    75%{
+        content: "Bolt";
+    }
+    100%{
+        content: "Oreos";
+    }
+}
+
+.carousel::after{
+    content: "";
+    animation: carouselAnimation infinite 2s linear;
+    background-color: var(--colour-4);
+    padding: .25em .25em;
+    border-radius: 5px;
+    color: purple;
+}
