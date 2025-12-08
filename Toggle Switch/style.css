@@ -1,0 +1,40 @@
+body{
+
+}
+
+:root{
+    --switch-width: 100px;
+    --swicth-height: 40px
+}
+
+/* ===== LAYOUT ===== */
+label{
+    border: 3px solid black;
+    border-radius: 40px;
+    width: var(--switch-width);
+    height: var(--swicth-height);
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    padding: .25em;
+}
+
+/* ===== SWITCH & ANIMATION ===== */
+
+input[type = "checkbox"]{
+    display: none;
+}
+
+.toggle-circle{
+    width: var(--swicth-height);
+    height: var(--swicth-height);
+    background-color: black;
+    border-radius: 100%;
+}
+
+.toggle-input:checked ~ .toggle-circle{
+    transform: translateX(calc(var(--switch-width) - var(--swicth-height)));
+}
+
+
+
