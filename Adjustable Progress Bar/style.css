@@ -1,0 +1,65 @@
+html, body {
+    font-size: 16px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+:root {
+    --stage-1: 25%;
+    --stage-2: 50%;
+    --stage-3: 75%;
+    --stage-4: 100%;
+    --progbar-bg: lightgray;
+    --stage-1-bg: red;
+    --stage-2-bg: orange;
+    --stage-3-bg: greenyellow;
+    --stage-4-bg: green;
+}
+
+/* ===== LAYOUT ===== */
+
+.container{
+    border: 2px  pink;
+}
+
+.stage-1{
+    background-color: var(--stage-1-bg);
+    border-radius: 20px;
+    width: var(--stage-1);
+    max-width: 200px;
+    height: 30px;
+}
+
+.stage-2{
+    background-color: var(--stage-2-bg);
+    border-radius: 20px;
+    max-width: 200px;
+    height: 30px;
+    width: var(--stage-2);
+}
+
+.stage-3{
+    background-color: var(--stage-3-bg);
+    border-radius: 20px;
+    max-width: 200px;
+    height: 30px;
+    width: var(--stage-3);
+}
+
+.stage-4{
+    background-color: var(--stage-4-bg);
+    border-radius: 20px;
+    max-width: 200px;
+    height: 30px;
+    width: var(--stage-4);
+}
+
+.progress-bar{
+    width: 200px;
+    height: 30px;
+    background-color: var(--progbar-bg);
+    border-radius: 20px;
+    animation: loadingAnimation 1s;
+}
