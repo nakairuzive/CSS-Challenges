@@ -1,0 +1,52 @@
+.body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --progress-bg: lightgrey;
+    --start: red;
+    --middle: blue;
+    --finish: rgb(121, 255, 121);
+}
+
+/* ===== LAYOUT ===== */
+.container{
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.progress-bar{
+    background-color: var(--progress-bg);
+    width: 400px;
+    height: 30px;
+    border-radius: 20px;
+}
+
+.progress-status{
+    width: 10%;
+    background-color: var(--start);
+    animation: loadingAnimation 6s linear infinite;
+}
+
+@keyframes loadingAnimation{
+    50% {
+        width: 50%;
+        background-color: var(--middle);
+    }
+
+    75%{
+        width: 75%;
+        background-color: var(--finish);
+    }
+
+    100%{
+        width: 100%;
+        background-color: var(--finish);
+    }
+}
