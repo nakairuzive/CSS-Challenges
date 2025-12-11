@@ -1,0 +1,33 @@
+body{
+    padding: 2em;
+}
+
+:root{
+    --spinner: #f3f3f3;
+    --spinner-active: purple;
+}
+
+/* ===== LAYOUT ===== */
+
+.container{
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader{
+    width: 100px;
+    height: 100px;
+    border: 1em solid var(--spinner);
+    border-radius: 100%;
+    animation: loadingAnimation 1.5s linear infinite;
+    border-top: 20px solid var(--spinner-active);
+}
+
+@keyframes loadingAnimation {
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
