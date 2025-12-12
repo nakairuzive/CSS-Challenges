@@ -1,0 +1,89 @@
+body{
+    background-color: var(--bg-main);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font);
+    color: var(--font-color);
+}
+
+:root{
+    --font: 'Karla', sans-serif;
+    --font-color: #fff;
+    --grad1: #feda75;
+    --grad2: #fa7e1e;
+    --grad3: #d62976;
+    --grad4: #962fbf;
+    --grad5: #4f5bd5;
+    --viewed: gray;
+    --bg-main: #000;
+    --bg-live: red;
+}
+
+/* ===== TYPOGRAPHY ===== */
+
+/* ===== LAYOUT ===== */
+.stories-menu{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    justify-content: space-between;
+    padding-left: 0;
+}
+/* ===== STORY LAYOUT */
+.story{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: .5em;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* ===== IMAGES ===== */
+.img-wrapper{
+    width: 60px;
+    height: 60px;
+    border: 2px solid var(--bg-main);
+    background-color: white;
+    border-radius: 100%;
+    padding: 4px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.story-img{
+    height: 100%;
+    border-radius: 100%;
+    border: 2px solid var(--bg-main);
+}
+
+/* ===== STORY STATUS ===== */
+.new .img-wrapper{
+    background-image: linear-gradient(var(--bg-main), var(--bg-main)), linear-gradient( 360deg, var(--grad1),var(--grad2),var(--grad3),var(--grad4),var(--grad5));    
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+.viewed .img-wrapper{
+    background-color: var(--viewed);
+}
+
+.live::after {
+    content: "LIVE";
+    font-size: .5rem;
+    font-weight: bold;
+    color: var(--font-color);
+    background-color: var(--bg-live);
+    border-radius: 2px;
+    padding: 2px 4px;
+    width: 20px;
+    border: 2px solid var(--bg-main);
+    position: absolute;
+    top: 50%;
+}
