@@ -1,0 +1,60 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: white; 
+    height: 100vh;
+}
+
+:root {
+    --graph-bg: white;
+    --default-square-bg:#F8F4FF;
+    --level3: #E6E6FA;
+    --level5: #C9A0DC;
+    --level10: #645394;
+}
+
+/* ===== LAYOUT ===== */
+
+.graph-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.graph{
+    display: grid;
+    grid-template-columns: repeat(52, 15px);
+    gap: 5px;
+    background-color: var(--graph-bg);
+}
+
+
+/* ===== SQUARES =====*/
+ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+.square{
+    width: 15px;
+    height: 15px;
+    margin-bottom: 5px;
+    border-radius: 2px;
+    border: .5px solid lightgray;
+}
+
+li[data-value="10"]{
+    background-color: var(--level10)
+}
+
+li[data-value="5"]{
+    background-color: var(--level5);
+}
+
+li[data-value="3"]{
+    background-color: var(--level3);
+}
+
+li[data-value="0"]{
+    background-color: var(--default-square-bg);
+}
